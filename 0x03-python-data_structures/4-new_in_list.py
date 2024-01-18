@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-# relaces an element in a list at specific position without modifiying the original list (like in C).
+# relaces an element in a list at specific position without modification.
 
 def new_in_list(my_list, idx, element):
     if idx < 0 or idx >= len(my_list):
