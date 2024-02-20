@@ -1,13 +1,17 @@
 #!/usr/bin/python3
-"""Defines a rectangle class."""
+"""
+Defines a rectangle class.
+"""
+
+
 from models.base import Base
 
 
 class Rectangle(Base):
-    """Represent a rectangle."""
+    """Represent a Rectangle."""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """Initialize a new Rectangle.
+        """Initializes a new Rectangle.
         Args:
             width (int): The width of the new Rectangle.
             height (int): The height of the new Rectangle.
@@ -83,7 +87,7 @@ class Rectangle(Base):
         return self.width * self.height
 
     def display(self):
-        """Print the Rectangle using the `#` character."""
+        """Prints the Rectangle using '#' character."""
         if self.width == 0 or self.height == 0:
             print("")
             return
@@ -94,10 +98,16 @@ class Rectangle(Base):
             [print("#", end="") for w in range(self.width)]
             print("")
 
+    def __str__(self):
+        """Return the print() and str() representation of the Rectangle."""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                       self.x, self.y,
+                                                       self.width, self.height)
+
     def update(self, *args, **kwargs):
         """Update the Rectangle.
         Args:
-            *args (ints): New attribute values.
+            *arg (ints): New attribute values.
                 - 1st argument represents id attribute
                 - 2nd argument represents width attribute
                 - 3rd argument represent height attribute
@@ -148,9 +158,3 @@ class Rectangle(Base):
             "x": self.x,
             "y": self.y
         }
-
-    def __str__(self):
-        """Return the print() and str() representation of the Rectangle."""
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
-                                                       self.x, self.y,
-                                                       self.width, self.height)
