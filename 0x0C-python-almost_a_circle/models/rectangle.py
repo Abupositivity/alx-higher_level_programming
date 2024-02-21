@@ -6,7 +6,7 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """Represent a Rectangle."""
+    """Represents a Rectangle class that inherits from Base."""
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initializes a new Rectangle.
@@ -90,14 +90,14 @@ class Rectangle(Base):
             print("")
             return
 
-        [print("") for y in range(self.y)]
-        for h in range(self.height):
-            [print(" ", end="") for x in range(self.x)]
-            [print("#", end="") for w in range(self.width)]
-            print("")
+    [print("") for y in range(self.y)]
+    for h in range(self.height):
+        [print(" ", end="") for x in range(self.x)]
+        [print("#", end="") for w in range(self.width)]
+        print("")
 
     def __str__(self):
-        """Return the print() and str() representation of the Rectangle."""
+        """Return the print() and str() representations of the Rectangle."""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                                                        self.x, self.y,
                                                        self.width, self.height)
