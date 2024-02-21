@@ -6,7 +6,7 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """Represents a Rectangle class that inherits from Base."""
+    """Represents a Rectangle that inherits from Base."""
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initializes a new Rectangle.
